@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #dedede;
+            display: flex;
+            width: 150px;
+            height: 10px;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            border-radius: 10px;
+        }
+
+        .stick {
+            border-radius: 10px;
+            height: 10px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            animation: loading .5s infinite ease-in-out alternate-reverse;
+        }
+        @keyframes loading{
+            1%{
+                left: 0px;
+                background-color: red;
+            }
+            100%{
+                left: 75%;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="stick"></div>
+    </div>
+
+</body>
+
+</html>
